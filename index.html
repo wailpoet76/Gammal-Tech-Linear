@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LION | GAMMAL TECH _ ANIMI</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- start coding -->
+    <!-- Start Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="images/Small-Logo.png" alt="x" onclick="myIntro()">
+            <p onclick="myIntro()">Gammal Teach</p>
+        </div>
+        <div class="user-btn">
+            <span onclick="Signin()">Sign In</span>
+            <span onclick="Signup()">Sign Up</span> <!-- /* Sign not sing*/ -->
+        </div>
+
+    </nav>
+    <!-- End Navigation Bar -->
+    <!-- Start Main Body -->
+    <!-- Start Sun Effect -->
+    <div class="sun"></div>
+    <!-- End Sun Effect-->
+    <!-- Start Moon -->
+    <div class="moon"></div>
+    <!-- End Moon -->
+    <section>
+
+        <div class="camel">
+            <div class="Image">
+                <img src="images/Camel.png" type="image/png">
+                <!-- Start Cyclic Icons -->
+                <div class="icons">
+                    <div class="cycle one" onclick="Course()">
+                        <div>
+                            <img src="images/icon-course.png" alt="">
+                            Courses
+                        </div>
+                    </div>
+                    <div class="cycle two" onclick="Master()">
+                        <div>
+                            <img src="images/icon-masterclass.png" alt="">
+                            Masterclass
+                        </div>
+                    </div>
+                    <div class="cycle three" onclick="Subs()">
+                        <div>
+                            <img src="images/icon-subscription.png" alt="">
+                            Subscription
+                        </div>
+                    </div>
+                    <div class="Empty" onclick="Subs()">
+                        
+                    </div>
+                    <div class="cycle four" onclick="About()">
+                        <div>
+                            <img src="images/icon-about.png" alt="">
+                            About
+                        </div>
+                    </div>
+                    <div class="cycle five" onclick="Help()">
+                        <div>
+                            <img src="images/icon-help.png" alt="">
+                            Help
+                        </div>
+                    </div>
+                    <div class="cycle six" onclick="Media()">
+                        <div>
+                            <img src="images/icon-media.png" alt="">
+                            Media
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Cyclic Icons -->
+        <!--Start land -->
+        <div class="dunes">
+            <img src="images/dunes.jpg" alt="">
+            <div class="night-cover"></div>
+        </div>
+        <!--End land -->
+
+    </section>
+    <!-- End Main Body -->
+    <!-- Start Footer -->
+    <footer>
+        <img src="images/youtube.png" alt="" onclick="Youtube()">
+        <p onclick="Foot2()"><i class="fas fa-copyright"></i> 2023 Gammal Tech. All rights reserved.</p>
+        <img class="whats" src="images/whatsapp.png" alt="" onclick="whats()">
+
+    </footer>
+    <!-- End Footer -->
+
+    <!--Java Script File-->
+    <script type="text/javascript" src="Script/Main.js"></script>
+</body>
+
+</html>

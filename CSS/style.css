@@ -1,0 +1,592 @@
+/* Start Global Variables */
+:root {
+    --padding--: 60px;
+    --main-color: #13fec5;
+    --secondary-color: #e6d706;
+    --third-color: #5b7979;
+    --fourth-color: #fa319f;
+    --fifth-color: #01b1fd;
+    --lite-Dark-color: #325d79;
+    --Dark-color: #1c1a1f;
+}
+
+/* Start of movies area */
+
+
+@keyframes sunset {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(55vw, -25vh);
+    }
+
+    50% {
+        transform: translate(110vw, -50vh);
+    }
+
+    75% {
+        transform: translate(165vw, -25vh);
+    }
+
+    100% {
+        transform: translate(220vw, -50vh);
+    }
+}
+
+@keyframes dunes {
+    0% {
+        background-color: rgb(0, 0, 0, 0);
+    }
+
+    50% {
+        background-color: rgb(0, 0, 0, 0);
+    }
+
+    100% {
+        background-color: rgb(0, 0, 0, 0.8);
+    }
+}
+
+@keyframes night {
+    0% {
+        background: linear-gradient(to bottom, #90a5a4 48vh, rgb(184 151 118) calc(52vh + 150px));
+    }
+
+    90% {
+        background: linear-gradient(to bottom, #90a5a4 48vh, rgb(184 151 118) calc(52vh + 150px));
+    }
+
+    100% {
+        background: linear-gradient(to bottom, rgb(5, 5, 5) 35vh, teal calc(35vh + 150px));
+    }
+}
+
+@keyframes navcolor {
+    0% {
+        color: var(--third-color);
+    }
+
+    90% {
+        color: var(--third-color);
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+@keyframes moon {
+    0% {
+        top: 100vh;
+    }
+
+    90% {
+        top: 100vh;
+    }
+
+    100% {
+        top: 0vh;
+    }
+}
+
+@keyframes mooncolor {
+    0% {
+        background-color: teal;
+    }
+
+    100% {
+        background-color: rgb(5, 5, 5);
+    }
+}
+
+
+/* End of movies area */
+/* End Global Variables */
+
+/* Start Main */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "cairo", serif;
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(5, 5, 5) 35vh, teal calc(35vh + 150px));
+
+    width: 100vw;
+    height: 100vh;
+    min-width: 360px;
+    overflow: hidden;
+    animation: night 12s linear;
+}
+
+/* End Main */
+
+/* Start Style */
+/* Start Navigation Bar */
+nav {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.5em;
+    transition: 2s;
+    min-width: 360px;
+    border: 3px solid var(--Dark-color);
+    background-color: transparent;
+    box-shadow: -1px -1px 20px 5px rgba(0, 0, 0, .2);
+    border: 0 0 10px rgba (0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    animation: navcolor 12s linear;
+}
+
+nav .logo {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+nav .logo p:hover {
+    color: var(--main-color);
+    text-shadow: 1px 2px 10px white;
+
+}
+
+nav .logo img {
+    width: 48px;
+    transition: 0.5s;
+}
+
+nav .logo img:hover {
+    transform: rotateY(360deg);
+    transition-timing-function: linear;
+}
+
+nav .logo p {
+    margin: 20px;
+    transition: 1s;
+}
+
+nav .user-btn {
+    margin: 20px;
+    height: fit-content;
+}
+
+nav .user-btn span {
+    margin: 15px;
+    padding: 0px 20px;
+    background-color: transparent;
+    border: 3px solid var(--fourth-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+nav .user-btn span:nth-last-child(2) {
+    border: 3px solid var(--fifth-color);
+}
+
+nav .user-btn span:hover {
+    box-shadow: 0px 0px 10px 5px var(--fourth-color);
+    background-color: var(--Dark-color);
+    color: var(--main-color);
+}
+
+nav .user-btn span:nth-last-child(2):hover {
+    box-shadow: 0px 0px 10px 5px var(--fifth-color);
+    background-color: var(--Dark-color);
+    color: var(--main-color);
+}
+
+/* looking for width */
+@media screen and (max-width : 640px) {
+
+    nav {
+        font-size: .9em;
+    }
+
+    nav .logo p {
+        display: none;
+    }
+}
+
+/* mobile version */
+@media screen and (min-width : 320px) and (max-width : 480px) {
+
+    nav {
+        font-size: .8em;
+    }
+
+    .icons .cycle {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav .logo p {
+        display: none;
+    }
+
+    nav .user-btn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: 1em !important;
+    }
+
+    section .dunes {
+        top: 650px;
+        left: 0px;
+        width: 500px;
+        margin: 0;
+    }
+
+}
+
+@media screen and (min-width : 641px) {
+
+    nav {
+        font-size: 1.2em;
+    }
+
+}
+
+/* End Navigation Bar*/
+/* Start Main Body*/
+/* Start Sun*/
+.sun {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(at center, white 5%, white 8%, yellow 70%, orange);
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px 50px white;
+    position: absolute;
+    top: 50vh;
+    left: -60vw;
+    z-index: -1;
+    animation: sunset 12s linear;
+}
+
+/* End Sun*/
+/* Start Moon*/
+.moon {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(at center, white 80%, white 90%, grey);
+    border-radius: 50%;
+    /* border: 10px solid white; */
+    box-shadow: 0px 0px 10px 2px white;
+    position: relative;
+    top: 20px;
+    left: 100px;
+    /* overflow: hidden; */
+    animation: moon 15s ease-in;
+}
+
+.moon::before {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    top: -10px;
+    left: 15px;
+    animation: mooncolor 2s ease-in 13.2s;
+
+}
+
+/* End Moon*/
+/* Start Camel*/
+.camel {
+    position: relative;
+    /* background-color: green; */
+    width: 100vw;
+    top: 34vh;
+}
+
+.camel .Image {
+    position: absolute;
+    left: calc((100% - 200px) / 2);
+    top: -95px;
+    padding-left: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+    border-radius: 50%;
+}
+
+
+/* End Camel*/
+/* Start Cyclic icons*/
+
+.camel .icons {
+    width: 920px;
+    height: 110px;
+    position: relative;
+    left: -212%;
+    top: -70%;
+    /* background-color: yellow; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.icons .cycle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    border: 5px solid transparent;
+    box-shadow: 0px 0px 10px var(--third-color);
+    margin: 0px 10px;
+    transition: 0.5s;
+    animation: vibY 3s linear infinite;
+}
+
+@keyframes vibY {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-50px);
+    }
+
+    75% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes vibX {
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-50px);
+    }
+
+    75% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.icons .cycle.two {
+    animation-delay: -1s;
+}
+
+.icons .cycle.three {
+    animation-delay: -2s;
+}
+
+.icons .cycle.four {
+    animation-direction: reverse;
+}
+
+.icons .cycle.five {
+    animation-delay: -1s;
+    animation-direction: reverse;
+}
+
+.icons .cycle.six {
+    animation-direction: reverse;
+    animation-delay: -2s;
+}
+
+.icons .cycle:hover {
+    animation-play-state: paused;
+    animation-play-state: paused;
+    transition: 0.5s;
+    background-color: yellow !important;
+    border: 15px var(--fourth-color);
+    box-shadow: 0px 0px 20px 15px var(--fourth-color);
+    cursor: pointer;
+}
+
+
+.cycle div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cycle div img {
+    width: 50%;
+}
+
+.cycle.three {
+    font-size: 12px !important;
+}
+
+.icons .Empty {
+    width: 170px;
+    height: 100px;
+}
+
+@media screen and (max-width : 860px) {
+
+    .camel .icons {
+        flex-direction: column;
+        width: 600px;
+        height: 360px;
+        top: -300px;
+        left: -250px;
+        flex-wrap: wrap;
+
+        /* background-color: green; */
+    }
+
+    .camel .icons .cycle {
+        animation-name: vibX;
+        margin: 10px 0px;
+    }
+
+    .icons .Empty {
+        flex-basis: 300px;
+    }
+
+}
+
+/* mobile version */
+@media screen and (max-width : 480px) {
+
+    .camel .icons {
+        flex-direction: column;
+        width: 300px;
+        height: 250px;
+        top: -250px;
+        left: -50px;
+        flex-wrap: wrap;
+    }
+
+    .camel .icons .cycle {
+        width: 50px;
+        height: 50px;
+        font-size: 0.5em;
+        margin: 10px 0px;
+    }
+
+    .camel .icons .cycle.one {
+        width: 50px;
+        height: 50px;
+        font-size: 0.7em;
+    }
+
+    .camel .icons .cycle {
+        animation-name: vibX;
+    }
+
+    .icons .Empty {
+        width: 50px;
+        flex-basis: 200px;
+        /* background-color: red; */
+    }
+
+}
+
+/* End Cyclic icons*/
+/* Start dunes*/
+.dunes {
+    float: left;
+    width: 100vw;
+    height: 165px;
+    overflow: hidden;
+    background-position: bottom;
+    position: absolute;
+    top: 460px;
+    z-index: 2;
+}
+
+.dunes img {
+    width: 100vw;
+    height: 450px;
+    display: flex;
+    position: absolute;
+    bottom: -50px;
+}
+
+.dunes .night-cover {
+    width: 100vw;
+    height: 320px;
+    position: absolute;
+    /* bottom: -50px; */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    top: -145px;
+    left: 0px;
+    animation: dunes 12s linear;
+}
+
+/* End dunes*/
+
+/* End Main Body*/
+/* Start Footer*/
+footer {
+    width: 100vw;
+    height: 7vh;
+    position: absolute;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+footer img:nth-child(1) {
+    cursor: pointer;
+    height: 30px;
+}
+
+footer p {
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    animation: footercolor 12s linear;
+}
+
+@keyframes footercolor {
+    from {
+        color: var(--Dark-color);
+    }
+
+}
+
+footer .whats {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+}
+
+/* End Footer*/
+/* End Style*/
